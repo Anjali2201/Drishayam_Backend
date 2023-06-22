@@ -21,9 +21,9 @@ def predict():
     name = request.form.get('name')
     age = request.form.get('age')
     image_path = request.files["image"]
-    image_path.save('uploaded_image.jpg')
+    image_path.save('./Assets/uploaded_image.jpg')
 
-    image_new = "Assets/uploaded_image.jpg"
+    image_new = "./Assets/uploaded_image.jpg"
     image = tf.keras.preprocessing.image.load_img(image_new, target_size=(55, 94))
     image = tf.keras.preprocessing.image.img_to_array(image)
     image = np.expand_dims(image, axis=0)
