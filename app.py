@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 import tensorflow as tf
 import numpy as np
 from flask_cors import CORS
-import warnings
 
 
 app = Flask(__name__)
